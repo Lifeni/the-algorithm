@@ -1,3 +1,6 @@
 *.pdf
 *.exe
-*.editorbackup
+*.editbackup
+
+node_modules
+dist
