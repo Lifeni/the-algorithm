@@ -2,5 +2,6 @@
 *.exe
 *.editbackup
 
+.vscode
 node_modules
 dist
