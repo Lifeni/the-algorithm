@@ -6,28 +6,38 @@
 
 body {
   padding: 2rem;
+  min-height: 100vh;
+  min-height: 100svh;
   font-family: Inter, -apple-system, MiSans, 'HarmonyOS Sans SC', system-ui,
     'Source Han Sans SC', 'Noto Sans SC', Roboto, emoji, sans-serif;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  min-height: 100vh;
   background-color: #ffffff;
   color: #1f2328;
 }
 
 main {
+  position: relative;
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   align-items: center;
+  justify-content: center;
+}
+
+aside {
+  position: absolute;
+  top: 0;
+  right: 0;
 }
 
 img {
-  position: relative;
-  width: 8rem;
-  height: 8rem;
-  border-radius: 100%;
+  max-width: 100%;
+  width: auto;
+  max-height: 100%;
+  height: auto;
+  border-radius: 0.25rem;
   user-select: none;
   pointer-events: none;
   color: transparent;
@@ -42,7 +52,31 @@ img {
     color: #e6edf3;
   }
 
+  p {
+    color: #6e7681;
+  }
+
   img {
     background-color: #0d1117;
+  }
+}
+
+@media (max-width: 600px) {
+  body {
+    padding: 1rem;
+  }
+
+  main {
+    padding-bottom: 15vw;
+  }
+
+  aside {
+    position: fixed;
+    padding: 0 0 10vw 0;
+    top: unset;
+    bottom: 0;
+    right: unset;
+    left: 50%;
+    transform: translateX(-50%);
   }
 }
