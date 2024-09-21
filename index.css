@@ -5,9 +5,9 @@
 }
 
 body {
-  padding: 2rem;
   min-height: 100vh;
   min-height: 100svh;
+  padding: 2rem;
   font-family: Inter, -apple-system, MiSans, 'HarmonyOS Sans SC', system-ui,
     'Source Han Sans SC', 'Noto Sans SC', Roboto, emoji, sans-serif;
   display: flex;
@@ -19,7 +19,6 @@ body {
 }
 
 main {
-  position: relative;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -27,9 +26,39 @@ main {
 }
 
 aside {
-  position: absolute;
-  top: 0;
-  right: 0;
+  width: 100%;
+  padding: 1rem 0;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+section {
+  display: flex;
+  flex-direction: column;
+}
+
+h1 {
+  font-weight: 600;
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+p {
+  font-weight: 400;
+  color: #6e7681;
+  font-size: 0.75rem;
+}
+
+audio {
+  border-radius: 4rem;
+}
+
+picture {
+  width: 100%;
+  z-index: 10;
 }
 
 img {
@@ -53,30 +82,26 @@ img {
   }
 
   p {
-    color: #6e7681;
+    color: #9198a1;
   }
 
   img {
     background-color: #0d1117;
+    width: unset;
   }
 }
 
-@media (max-width: 600px) {
+@media (max-width: 640px) {
   body {
     padding: 1rem;
-  }
-
-  main {
-    padding-bottom: 15vw;
+    min-height: fit-content;
   }
 
   aside {
-    position: fixed;
-    padding: 0 0 10vw 0;
-    top: unset;
-    bottom: 0;
-    right: unset;
-    left: 50%;
-    transform: translateX(-50%);
+    align-items: flex-start;
+  }
+
+  section {
+    writing-mode: vertical-lr;
   }
 }
